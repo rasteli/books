@@ -65,7 +65,7 @@ model Highlight {
   Book      Book     @relation(fields: [bookId], references: [id])
   bookId    String
   body      String
-  comment   String
+  comment   String?
   color     String
   createdAt DateTime @default(now())
   createdBy String
