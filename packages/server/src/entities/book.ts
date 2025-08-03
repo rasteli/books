@@ -8,6 +8,8 @@ interface BookProps {
   tags: string[]
   summary: string
   key: string
+  size: number
+  mimeType: string
   numberOfPages: number
   currentPage?: number
   categories?: string[]
@@ -30,5 +32,9 @@ export class Book {
     }
 
     this.props = props
+  }
+
+  get createdBy() {
+    return this.props.createdBy
   }
 }

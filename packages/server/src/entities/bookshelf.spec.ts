@@ -22,7 +22,9 @@ describe('Create bookshelf', () => {
       summary: 'Second volume of The Lord of the Rings trilogy',
       key: 'dkasjhjda327das120da-32#@dsa',
       numberOfPages: 464,
-      createdBy
+      createdBy,
+      size: 1 * 1024 * 1024 * 1024,
+      mimeType: 'application/pdf'
     })
 
     expect(() => createBookshelf([book, book], name, createdBy)).not.toThrow()

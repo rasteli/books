@@ -31,6 +31,8 @@ model Book {
   tags          String[]
   summary       String?
   key           String?
+  size          Int
+  mimeType      String
   numberOfPages Int
   currentPage   Int               @default(1)
   createdAt     DateTime          @default(now())
