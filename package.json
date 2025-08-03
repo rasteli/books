@@ -7,7 +7,8 @@
     "start:server": "pnpm --filter @books/server run dev",
     "start:client": "pnpm --filter @books/client run dev",
     "build": "pnpm recursive run build",
-    "test": "vitest"
+    "test": "vitest",
+    "test:w": "vitest watch"
   },
   "keywords": [],
   "author": "Gabriel Rasteli <gabriel.rasteli@gmail.com>",

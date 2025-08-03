@@ -1,10 +1,11 @@
-import z from 'zod'
+import { z } from 'zod'
 import type { FastifyTypedInstance } from './types'
 import { randomUUID } from 'node:crypto'
+import { userSchema } from './entities/user'
 
 interface User {
   id: string
-  name: string
+  username: string
   email: string
 }
 
@@ -21,7 +22,7 @@ export async function routes(app: FastifyTypedInstance) {
           200: z.array(
             z.object({
               id: z.string(),
-              name: z.string(),
+              username: z.string(),
               email: z.string()
             })
           )
@@ -39,21 +40,18 @@ export async function routes(app: FastifyTypedInstance) {
       schema: {
         description: 'Cria um usuário',
         tags: ['Usuário'],
-        body: z.object({
-          name: z.string(),
-          email: z.email()
-        }),
+        body: userSchema,
         response: {
           201: z.null().describe('Usuário criado')
         }
       }
     },
     async (request, response) => {
-      const { email, name } = request.body
+      const { email, password, username } = request.body
 
       users.push({
         id: randomUUID(),
-        name,
+        username,
         email
       })
 
