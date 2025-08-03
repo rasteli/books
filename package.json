@@ -1,0 +1,22 @@
+{
+  "name": "books",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start:server": "pnpm --filter @books/server run dev",
+    "start:client": "pnpm --filter @books/client run dev",
+    "build": "pnpm recursive run build",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "Gabriel Rasteli <gabriel.rasteli@gmail.com>",
+  "license": "ISC",
+  "packageManager": "pnpm@10.14.0",
+  "devDependencies": {
+    "@books/eslint-config": "workspace:*",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
