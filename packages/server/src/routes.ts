@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import type { FastifyTypedInstance } from './types'
 import { randomUUID } from 'node:crypto'
-import { userSchema } from './entities/user'
+import { userSchema } from './dtos/create-user-dto'
 
 interface User {
   id: string

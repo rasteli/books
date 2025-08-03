@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { User } from './user'
 
 function createUser(username: string, email: string, password: string) {
-  return new User(username, email, password)
+  return new User({ username, email, password })
 }
 
 describe('Create user', () => {
