@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeAll } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { CreateUser } from './create-user'
 import { MemoryUserRepository } from '../repositories/memory/memory-user-repository'
 
