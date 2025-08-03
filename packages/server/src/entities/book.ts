@@ -1,4 +1,4 @@
-import { bookSchema } from '../dtos/create-book-dto'
+import { bookSchema } from '../lib/zod/schemas/create-book-schema'
 import { getFirstErrorMessage } from '../utils/zod'
 
 interface BookProps {

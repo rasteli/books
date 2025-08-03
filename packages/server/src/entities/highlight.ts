@@ -1,4 +1,4 @@
-import { highlightSchema } from '../dtos/create-highlight-dto'
+import { highlightSchema } from '../lib/zod/schemas/create-highlight-schema'
 import { getFirstErrorMessage } from '../utils/zod'
 import { Book } from './book'
 

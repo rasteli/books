@@ -1,5 +1,5 @@
 import { getFirstErrorMessage } from '../utils/zod'
-import { categorySchema } from '../dtos/create-category-dto'
+import { categorySchema } from '../lib/zod/schemas/create-category-schema'
 import { Book } from './book'
 
 interface CategoryProps {

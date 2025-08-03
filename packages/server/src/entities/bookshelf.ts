@@ -1,4 +1,4 @@
-import { bookshelfSchema } from '../dtos/create-bookshelf-dto'
+import { bookshelfSchema } from '../lib/zod/schemas/create-bookshelf-schema'
 import { getFirstErrorMessage } from '../utils/zod'
 import { Book } from './book'
 
