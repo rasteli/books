@@ -1,7 +1,16 @@
-import { defineProject } from 'vitest/config'
-import tsconfigPaths from 'vite-tsconfig-paths'
+import { defineConfig } from 'vitest/config'
+import dotenvFlow from 'dotenv-flow'
 
-export default defineProject({
-  plugins: [tsconfigPaths()],
-  test: {}
+const env = dotenvFlow.config({
+  path: './packages/server',
+  pattern: '.env.test'
+})
+
+export default defineConfig({
+  test: {
+    include: ['src/**/*.spec.ts']
+  },
+  define: {
+    'process.env': env.parsed
+  }
 })

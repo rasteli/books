@@ -1,0 +1,42 @@
+POST http://localhost:3333/register
+Content-Type: application/json
+
+{
+  "username": "rasteli3",
+  "email": "gabrielrasteli3@teste.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:3333/login
+Content-Type: application/json
+
+{
+  "username": "rasteli",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:3333/books
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZWYwNDg3OC02OWEwLTRhOGQtOWVkNC04MGZmYzg0NGRkOGQiLCJpYXQiOjE3NTUzOTg4NDUsImV4cCI6MTc1NjAwMzY0NX0.nFrfnEkbSczeBcDPfZ4txClKaxmjmnQ19Es54ut8r3o
+
+{
+  "title": "Tratado da Lavação da Burra",
+  "authors": ["Ângelo Monteiro"],
+  "size": 31457280,
+  "numOfPages": 78,
+  "mimeType": "application/pdf"
+}
+
+###
+
+GET http://localhost:3333/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZWYwNDg3OC02OWEwLTRhOGQtOWVkNC04MGZmYzg0NGRkOGQiLCJpYXQiOjE3NTUzNzY5NTEsImV4cCI6MTc1NTk4MTc1MX0.t_VdJaozCRhDsoeFzJ4TjjJr7Auc4grqABOPILkZkqc
+
+###
+
+GET http://localhost:3333/bookshelves
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZWYwNDg3OC02OWEwLTRhOGQtOWVkNC04MGZmYzg0NGRkOGQiLCJpYXQiOjE3NTUzNzY5NTEsImV4cCI6MTc1NTk4MTc1MX0.t_VdJaozCRhDsoeFzJ4TjjJr7Auc4grqABOPILkZkqc

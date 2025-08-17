@@ -1,0 +1,2 @@
+ALTER TABLE "books" ADD COLUMN "uploadedBy" uuid NOT NULL;--> statement-breakpoint
+ALTER TABLE "books" ADD CONSTRAINT "books_uploadedBy_users_id_fk" FOREIGN KEY ("uploadedBy") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;
