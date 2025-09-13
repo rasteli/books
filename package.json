@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "start:server": "pnpm --filter @books/server run dev",
-    "start:client": "pnpm --filter @books/client run dev",
+    "start:web": "pnpm --filter @books/web run dev",
     "build": "pnpm recursive run build",
     "pretest": "pnpm recursive run pretest",
     "test": "vitest"

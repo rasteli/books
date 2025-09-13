@@ -1,11 +1,9 @@
-import { ThemeToggle } from '@/components/theme/theme-toggle'
+import { Sidebar } from '@/components/sidebar'
 
 export default function Home() {
   return (
     <main>
-      <div>
-        <ThemeToggle />
-      </div>
+      <Sidebar />
     </main>
   )
 }
